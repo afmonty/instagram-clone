@@ -21,6 +21,11 @@ section.input {
   display: block;
   margin-bottom: 1em; }
 
+img {
+  width: 30em;
+  height: 30em;
+  margin: auto auto; }
+
 .inputUrl {
   width: 35em;
   height: 2em;
