@@ -1,34 +1,19 @@
+
 header{
 	background: #476C99;
 	height: 3em;
 }
 header button{
+	background: #476C99;
 	height: 2em;
 	width: 2em;
-	border-radius: 1em;
+	
 
 }
 section.input{
 	padding: 5em;
-	margin-left: auto auto;
 }
-
-.display{
-	height: 50em;
-	width: 30em;
-}
-.inputCaption{
-	width: 35em;
-	height: 2em;
-	display: block;
-	margin-bottom: 1em;
-}
-img{
-	width: 30em;
-	height: 30em;
-	margin: auto auto;
-}
-.inputUrl{
+#inputUrl{
 	width: 35em;
 	height: 2em;
 	display: block;
@@ -38,3 +23,24 @@ img{
 	float: right;
 	margin: .5em;
 }
+.inputComment{
+	width: 35em;
+	height: 2em;
+	display: block;
+	margin-bottom: 1em;
+}
+.display{
+	background: #E0E1E2;
+	margin: auto auto;
+}
+.divContainer{
+	background: white;
+	height: 10em;
+	width: 10em;
+}
+img{
+	width: 20em;
+	height: 20em;
+	margin: 0;
+}
+

@@ -1,12 +1,15 @@
-var iUrl = $(".inputUrl");
-var iComment = $(".inputComment");
+var $iUrl = $("#inputUrl");
+var $iComment = $(".inputComment");
 //var form = $("form");
-var picture = [];
+//var picture = [];
 var $item = $(".divContainer");
 var picsUrl = "http://small-tiyfe.herokuapp.com/collections/pictures";
 
-function display(){
-		$item.append(("<img src ='"+picture.url+"'/>")+("<div>"+picture.comment+"</div>"));
+
+
+function display(picture){
+		$item.append(("<div><img src ='"+picture.url+"'/></div>")+
+			("<div>"+picture.com+"</div>"));
 };
 
 
@@ -27,10 +30,10 @@ $(function(){
 
 
 $( ".addButton" ).click(function () {
-  if ( $( "section" ).is( ":hidden" ) ) {
-    $( "section" ).slideDown( "slow" );
+  if ( $( ".input" ).is( ":hidden" ) ) {
+    $( ".input" ).slideDown( "slow" );
   } else {
-    $( "section" ).slideUp();
+    $( ".input" ).slideUp();
   }
 });
 
@@ -40,8 +43,8 @@ $(".addImage").click(saveInput);
 
 function saveInput(){
 var picture = {
-	url: iUrl.val(),
-	com: iComment.val(),
+	url: $iUrl.val(),
+	com: $iComment.val(),
 };
 		var postSettings = $.ajax({
 			url: picsUrl,
@@ -56,6 +59,7 @@ var picture = {
 		    }
 		 })
 };
+
 
 
 
