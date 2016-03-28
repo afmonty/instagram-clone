@@ -38,28 +38,37 @@ $( ".addButton" ).click(function () {
 $(".addImage").click(saveInput);
 
 function saveInput(){
-var picture = {
-	url: $iUrl.val(),
-	com: $iComment.val(),
-};
-		var postSettings = $.ajax({
-			url: picsUrl,
-			type: 'post',
-			dataType: 'json',
-			data: picture,
-			success: function(newpic){
-				display(newpic);
-			},
-		 	error: function(err) {
-		 	 console.log("error")
-		    }
-		 })
-};
+	var picture = {
+		url: $iUrl.val(),
+		com: $iComment.val(),
+	};
+	if(!($iUrl.val()) || !($iComment.val())) {
+		alert("Please do not leave fields blank");
+	 } else if
+ 		(!($iUrl.val().contains("http")) {
+ 			alert("Please enter a valid URL.");
+ 		} else {	
+			var postSettings = $.ajax({
+				url: picsUrl,
+				type: 'post',
+				dataType: 'json',
+				data: picture,
+				success: function(newpic){
+					display(newpic);
+				},
+			 	error: function(err) {
+			 	 console.log("error")
+			    }
+			 })
+		  }
+	 };
+	
+
 
 $(".cancel").click(function() {
 	$iUrl.val("");
 	$iComment.val("");
-})
+});
 
 
 
