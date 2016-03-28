@@ -44,7 +44,7 @@ function saveInput(){
 	};
 	if(!($iUrl.val()) || !($iComment.val())) {
 		alert("Please do not leave fields blank");
-	 } else if(!($iUrl.val().contains("http"))) {	 
+	 } else if(($iUrl.val()).indexOf("http") !== 0) {	 
  		  alert("Please enter a valid URL.");
  		  } else {	
 			var postSettings = $.ajax({
@@ -57,6 +57,10 @@ function saveInput(){
 				},
 			 	error: function(err) {
 			 	 console.log("error")
+			    },
+			    complete: function(com) {
+			    	$iUrl.val("");
+					$iComment.val("");
 			    }
 			 })
 		  }
