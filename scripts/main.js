@@ -1,8 +1,6 @@
 var $iUrl = $("#inputUrl");
 var $iComment = $(".inputComment");
-//var form = $("form");
-//var picture = [];
-var $item = $(".divContainer");
+var $item = $("#divContainer");
 var picsUrl = "http://small-tiyfe.herokuapp.com/collections/pictures";
 
 
@@ -19,7 +17,6 @@ $(function(){
 		type: 'get',
 		dataType: 'json',
 		success: function(pictures){
-			console.log("get");
 			$.each(pictures, function(i, picture){
 			display(picture);
 			});
@@ -39,7 +36,6 @@ $( ".addButton" ).click(function () {
 
 
 $(".addImage").click(saveInput);
-	console.log("click");
 
 function saveInput(){
 var picture = {
@@ -59,6 +55,11 @@ var picture = {
 		    }
 		 })
 };
+
+$(".cancel").click(function() {
+	$iUrl.val("");
+	$iComment.val("");
+})
 
 
 
