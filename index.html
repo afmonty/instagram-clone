@@ -9,18 +9,22 @@
 <body>
   	<header class = "addButtonHolder">
   		<button class = "addButton">
-  			
+  		<i class="fa fa-plus-circle fa-2x pull-left"></i> 	
   		</button>
   	</header>
   	<section class = "input">
 	  	<input type = "text" id = "inputUrl"/>
 	  	<input type = "text" class = "inputComment"/>
-	  	<input type="reset" value="Cancel" class = "inputButton"/>
-	  	<button class = "addImage inputButton">Add Image</button>
+	  	<button class = "cancel">Cancel
+	  	</button>
+	  	<button class = "addImage">Add Image<i class="fa fa-picture-o fa-x3"></i></button>
   	</section>
   <Section class = "display">
-  	<div class = "divContainer">
-  	</div>
+   <div class = "row">
+      <div class="col-sm-6 col-md-offset-3">
+	  	<div id = "divContainer" class="well-lg">
+	  	</div>
+  </div>	
   </Section>
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/main.js"></script>
