@@ -44,10 +44,9 @@ function saveInput(){
 	};
 	if(!($iUrl.val()) || !($iComment.val())) {
 		alert("Please do not leave fields blank");
-	 } else if
- 		(!($iUrl.val().contains("http")) {
- 			alert("Please enter a valid URL.");
- 		} else {	
+	 } else if(!($iUrl.val().contains("http"))) {	 
+ 		  alert("Please enter a valid URL.");
+ 		  } else {	
 			var postSettings = $.ajax({
 				url: picsUrl,
 				type: 'post',
